@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{general}
+
+\usepackage{tikz}
+\usepackage{siunitx}
+\DeclareSIUnit{\length}{L}
+\DeclareSIUnit{\mass}{M}
+\DeclareSIUnit{\time}{T}
+\DeclareSIUnit{\temperature}{K}
+\DeclareSIUnit{\mole}{Mol}
+
+% \linespread{1.3}
+%%%%% FANCY HEADER
+\fancyhead[L]{\fontsize{8}{10} \selectfont  \textbf{Template} \\}
+\fancyhead[C]{\fontsize{8}{10} \selectfont  Tristan Merbecks \\}
+\fancyhead[R]{\fontsize{8}{10} \selectfont  \includegraphics[scale=0.4]{images/logos/EASYGO}\\}
+%%%% Fancy Header
+
+\begin{document}
+    % \modulolinenumbers[5]
+    % \linenumbers
+    % \listoftodos
+    
+    \pagenumbering{gobble}  % turns of page numbering
+    
+    \input{content/title_page.tex}  % insert title page
+    \pagestyle{plain}
+    \newgeometry{ top = 25mm,left=30mm,right=20mm, headheight=30pt}
+    
+    \cleardoublepage
+    
+    
+
+    % Acknowledgements page
+    \vspace*{\fill}
+    \begingroup
+        \section*{Acknowledgements}
+        \input{content/acknowledgements.tex}
+    \endgroup
+    \vspace*{\fill}
+    \cleardoublepage
+    
+    
+    \pagenumbering{roman}  % start roman style page numbering
+
+    % Abstract Section
+    \section*{Abstract}\label{sec:abstract}
+        \addcontentsline{toc}{section}{Abstract}  % add this section to the table of contents
+        
+        \input{content/abstract.tex}
+    \cleardoublepage
+
+    
+    % Abbreviations Section
+    \begingroup
+        \section*{Abbreviations}\label{sec:abbreviations}
+            \input{content/abbreviations.tex}
+    \endgroup
+    \clearpage
+
+
+    % Symbols Section
+    \begingroup
+        \section*{Symbols}\label{sec:symbols}
+            \input{content/symbols.tex}
+    \endgroup
+    \clearpage
+    
+    
+    % Units Section
+    \begingroup
+        \section*{Units}\label{sec:units}
+            \input{content/units.tex}
+    \endgroup
+    \cleardoublepage
+    
+
+    % insert Table of Contents
+    \tableofcontents
+    \cleardoublepage
+
+
+    \pagestyle{fancy}      % inserts the header on subsequent pages
+    \pagenumbering{arabic}  % start arabic style page numbering
+    
+    % Introduction Section
+    \section{Introduction}\label{sec:introduction}
+        \input{content/introduction.tex}
+    \cleardoublepage
+    
+    
+    % Literature Review
+    \section{Literature Review}\label{sec:lit_review}
+        \input{content/lit_review.tex}
+    \cleardoublepage
+
+
+    % Methodology
+    \section{Methodology}\label{sec:methodology}
+        \input{content/methodology.tex}
+    \cleardoublepage
+
+    % Conculsion
+    \section{Conclusion}\label{sec:conclusion}
+        \input{content/conclusion.tex}
+    \cleardoublepage
+
+
+    % Bibliography
+    \bibliography{bibliography}
+    \bibliographystyle{dinat}
+    \cleardoublepage
+
+
+    % Appendix
+    \section*{Appendix}\label{sec:appendix}
+        \addcontentsline{toc}{section}{Appendix}
+        \input{content/appendix.tex}
+    \cleardoublepage
+
+\end{document}

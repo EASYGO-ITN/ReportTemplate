@@ -1,0 +1,56 @@
+ %%%% General STY file%%%
+
+\usepackage{titling}
+%%%% HELVETICA FONT %%%%%%%%
+% \usepackage{helvet} 
+% \renewcommand{\familydefault}{\sfdefault}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\geometry{a4paper, portrait, top = 25mm,left=25mm,right=25mm, headheight=30pt}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\usepackage{graphicx}
+\usepackage{amsmath} %for matrix
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{siunitx}
+% \usepackage{subcaption}
+\usepackage[authoryear,sort&compress]{natbib}
+%\usepackage[colorlinks=true,citebordercolor=green,allbordercolors]{hyperref}
+
+\usepackage{xcolor}
+\usepackage{hyperref} %[allbordercolors]
+% \hypersetup{colorlinks=true,citebordercolor=green}
+\usepackage{color,soul}
+\usepackage[]{todonotes}
+\usepackage[]{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+% \usepackage{parskip}
+% \usepackage{indentfirst}
+%%% Colors for MatLab %%%%%
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\usepackage{lineno}
+\usepackage{textcomp}
+%\renewcommand{\sectionautorefname}{Section}
+\pagestyle{fancy}
+% 
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+
+% \usepackage{comment}
+% \excludecomment{figure}
+% \let\endfigure\relax
+
+\graphicspath{ {./images} }
