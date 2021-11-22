@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt, twoside]{article}
+\documentclass[a4paper,10pt, twoside]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{general}
 
@@ -45,53 +45,36 @@
     \pagenumbering{roman}  % start roman style page numbering
 
     % Abstract Section
-    \section*{Abstract}\label{sec:abstract}
-        \addcontentsline{toc}{section}{Abstract}  % add this section to the table of contents
-        
+    \chapter*{Abstract}\label{sec:abstract}
+        \addcontentsline{toc}{chapter}{Abstract}  % add this section to the table of contents
         \input{content/abstract.tex}
     \cleardoublepage
 
     
-    % Abbreviations Section
-    \begingroup
-        \section*{Abbreviations}\label{sec:abbreviations}
-            \input{content/abbreviations.tex}
-    \endgroup
-    \clearpage
-
-
-    % Symbols Section
-    \begingroup
-        \section*{Symbols}\label{sec:symbols}
-            \input{content/symbols.tex}
-    \endgroup
-    \clearpage
-    
-    
-    % Units Section
-    \begingroup
-        \section*{Units}\label{sec:units}
-            \input{content/units.tex}
-    \endgroup
+    % Nomenclature Section
+    \chapter*{Nomenclature}\label{sec:nomenclature}
+        \input{content/nomenclature.tex}
     \cleardoublepage
-    
+
 
     % insert Table of Contents
     \tableofcontents
     \cleardoublepage
 
 
+    % change the page styling
     \pagestyle{fancy}      % inserts the header on subsequent pages
     \pagenumbering{arabic}  % start arabic style page numbering
     
+    
     % Introduction Section
-    \section{Introduction}\label{sec:introduction}
+    \chapter{Introduction}\label{sec:introduction}
         \input{content/introduction.tex}
     \cleardoublepage
     
     
     % Literature Review
-    \section{Literature Review}\label{sec:lit_review}
+    \chapter{Literature Review}\label{sec:lit_review}
         \input{content/lit_review.tex}
     \cleardoublepage
 
@@ -101,8 +84,9 @@
         \input{content/methodology.tex}
     \cleardoublepage
 
+
     % Conculsion
-    \section{Conclusion}\label{sec:conclusion}
+    \chapter{Conclusion}\label{sec:conclusion}
         \input{content/conclusion.tex}
     \cleardoublepage
 
